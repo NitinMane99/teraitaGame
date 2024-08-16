@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teraita Games World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-green-500 text-white min-h-screen flex flex-col items-center justify-center">
+    <div class="container mx-auto p-4">
+        <h1 class="text-4xl font-bold mb-8 text-center">Teraita Games World</h1>
+        
+        <!-- Game Instructions -->
+        
+        
+        <!-- Game Container -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Number Guessing Game -->
+            <div id="numberGame" class="p-4 bg-white text-gray-800 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-center">Number Guessing Game</h2>
+                <input type="number" id="maxNumber" placeholder="Enter max number" class="p-2 border rounded w-full mb-4">
+                <input type="number" id="guessInput" placeholder="Enter your guess" class="p-2 border rounded w-full mb-4">
+                <button id="guessButton" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded w-full mb-4">Submit Guess</button>
+                <p id="feedback" class="text-center text-lg font-bold"></p>
+            </div>
+
+            <!-- Snake Game -->
+            <div id="snakeGame" class="p-4 bg-white text-gray-800 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-center">Snake Game</h2>
+                <canvas id="gameCanvas" class="block mx-auto bg-black rounded-lg"></canvas>
+                <p id="score" class="text-center text-lg font-bold mt-4">Score: 0</p>
+                <p id="finalScore" class="hidden text-center text-lg font-bold mt-4"></p>
+                <button id="restartButton" class="hidden bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded w-full mt-4">Restart Game</button>
+            </div>
+
+            <!-- Rock-Paper-Scissors Game -->
+            <div id="rpsGame" class="p-4 bg-white text-gray-800 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-center">Rock-Paper-Scissors</h2>
+                <div class="flex justify-around mb-4">
+                    <button class="rpsChoice bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">Rock</button>
+                    <button class="rpsChoice bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Paper</button>
+                    <button class="rpsChoice bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Scissors</button>
+                </div>
+                <p id="rpsResult" class="text-center text-lg font-bold"></p>
+            </div>
+        </div>
+    <br><br><br>
+    <div class="text-center mb-8 bg-white text-gray-800 p-4 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-semibold mb-4">Instructions</h2>
+        <p class="mb-4">Welcome to Teraita Games World! Here are the instructions for each game:</p>
+        
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold mb-2">Number Guessing Game:</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>Enter the maximum number to set the range for the random number.</li>
+                <li>Guess a number within that range.</li>
+                <li>Receive feedback on whether your guess is too high or too low.</li>
+                <li>Try to guess the number correctly to win!</li>
+            </ul>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold mb-2">Snake Game:</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>Use the arrow keys to control the snake's movement.</li>
+                <li>Try to eat the red food to grow the snake and increase your score.</li>
+                <li>Avoid colliding with the walls or the snake's own body.</li>
+                <li>Score as high as possible before the game ends.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="text-2xl font-semibold mb-2">Rock-Paper-Scissors:</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>Click on Rock, Paper, or Scissors to make your choice.</li>
+                <li>The computer will make its choice.</li>
+                <li>Rock beats Scissors, Scissors beats Paper, and Paper beats Rock.</li>
+                <li>Try to win against the computer!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
